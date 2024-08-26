@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Sneakers Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <h1>SNEEK <span style="color: #a0e9ff">PEAK</span></h1>
+      <header>
+        <!--navbar-->
+        <nav>
+          <div class="header-list">
+            <ul>
+              <li><a href="index.html" target="">Home</a></li>
+              <li><a href="man.html" target="">Man</a></li>
+              <li><a href="woman.html" target="">Woman</a></li>
+              <li><a href="collection.html" target="">Collection</a></li>
+              <li><a href="aboutus.html" target="">About Us</a></li>
+              <li>
+                <i class="fa-solid fa-cart-shopping" id="shpcarticon"></i>
+              </li>
+              <li>
+                <input
+                  class="searchbar"
+                  id="searchbar"
+                  type="search"
+                  placeholder="Search..."
+                />
+                <i class="fa-solid fa-magnifying-glass" id="searchicon"></i>
+              </li>
+              <li>
+                <button
+                  class="navbutton"
+                  id="navbutton"
+                  onclick="location.href='login.html'"
+                >
+                  Log In
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <button class="back-btn" onclick="location.href='index.html'" style="margin-top: 120px; margin-left: 160px">
+        Back to Home
+    </button>
+    <div class="wrapper">
+    <div class="container">
+        <div class="wrapper">
+            <div class="left">
+                <img id="productImage" alt="Product Image" /> 
+            </div>
+            <div class="right">
+                <div class="details">
+                    <h1 id="productTitle"></h1>
+                    <p id="productPrice"></p>
+                    <div class="mini-details">
+                        <h3 id="productCategory"></h3>
+                        <h3 id="productBrand"></h3>
+                        <div class="product-size">
+                            <p>Select Size</p>
+                            <div class="size-buttons">
+                              <table>
+                                <tr>
+                                  <td><button class="size-button">5</button></td>
+                                  <td><button class="size-button">5.5</button></td>
+                                  <td><button class="size-button">6</button></td>
+                                  <td><button class="size-button">6.5</button></td>
+                                  <td><button class="size-button">7</button></td>
+                                </tr>
+                                <tr>
+                                  <td><button class="size-button">7.5</button></td>
+                                  <td><button class="size-button">8</button></td>
+                                  <td><button class="size-button">8.5</button></td>
+                                  <td><button class="size-button">9</button></td>
+                                  <td><button class="size-button">9.5</button></td>
+                                </tr>
+                                <tr>
+                                  <td><button class="size-button">10</button></td>
+                                  <td><button class="size-button">10.5</button></td>
+                                  <td><button class="size-button">11</button></td>
+                                  <td><button class="size-button">11.5</button></td>
+                                  <td><button class="size-button">12</button></td>
+                                </tr>
+                              </table>
+                            </div>
+                    </div>
+                    <div class="products-btns">
+                        <a class="linki-prod" href="/">
+                            <button class="btn-description">Add to cart</button>
+                        </a>
+                        <a class="linki-prod" href="/">
+                            <button class="btn-description wishlist">Add To wishlist</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="./assets/dummydata.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        // Get the productId from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);//query selector te url
+        const productId = urlParams.get("productId");
+
+        // Retrieve the product information based on productId
+        const product = data.products[productId - 1]; // Subtract 1 because your image URLs start from 1
+
+        if (product) {
+        const image = document.getElementById("productImage");
+        const title = document.getElementById("productTitle");
+        const brand = document.getElementById("productBrand");
+        const category = document.getElementById("productCategory");
+        const price = document.getElementById("productPrice");
+
+        image.src = `./images/collection/${productId}.png`;
+        image.alt = product.title;
+        title.textContent = product.title;
+        brand.textContent = "Brand: " + product.brand;
+        category.textContent = "Category: " + product.gender;
+        price.textContent = "Price: $" + product.retailPrice;
+      } else {
+        console.error("Invalid productId:", productId);
+      }
+    });
+    </script>
+</body>
+</html>

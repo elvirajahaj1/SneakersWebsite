@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Frank+Ruhl+Libre:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js"></script>
+    <title>Online Sneakers Shop</title>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <h1>
+        <b>SNEAK <span style="color: #a0e9ff">PEAK</span></b>
+      </h1>
+      <header>
+        <!--Navbar-->
+        <nav>
+          <div class="header-list">
+            <ul>
+              <li><a href="index.html" target="">Home</a></li>
+              <li><a href="man.html" target="">Man</a></li>
+              <li><a href="woman.html" target="">Woman</a></li>
+              <li><a href="collection.html" target="">Collection</a></li>
+              <li><a href="aboutus.html" target="_blank">About Us</a></li>
+              <li>
+                <i class="fa-solid fa-cart-shopping" id="shpcarticon"></i>
+                <input
+                  class="searchbar"
+                  id="searchbar"
+                  type="search"
+                  placeholder="Search..."
+                />
+                <i class="fa-solid fa-magnifying-glass" id="searchicon"></i>
+              </li>
+              <li>
+                <button
+                  class="navbutton"
+                  id="navbutton"
+                  onclick="location.href='login.html'"
+                >
+                  Log In
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class="home">
+      <div id="home-container">
+        <div class="colorBlue">
+          <h2>SNEAKPEAK</h2>
+        </div>
+        <h1>
+          THE ULTIMATE
+          <span style="color: rgb(255, 115, 0); font-size: 60px">SNEAK</span>
+          SHOE <br />PARADISE
+        </h1>
+        <p style="color: gray; font-size: 14px; line-height: 20px">
+          Feel free to adapt these suggestions to set your specific context and
+          brading.
+        </p>
+        <a href="collection.html"><button class="button">BUY NOW</button></a>
+        <h4><i>COLORS:</i></h4>
+        <div class="circle-buttons">
+          <button class="red-btn" id="red-btn"></button>
+          <button class="yellow-btn" id="yellow-btn"></button>
+          <button class="blue-btn" id="blue-btn"></button>
+          <button class="gray-btn" id="gray-btn"></button>
+        </div>
+      </div>
+      <div class="home-middle-img" id="home-middle-img">
+        <img
+          class="middle-img"
+          src="./images/redSneaker.png"
+          alt="Red Sneakers"
+          id="middle-img"
+        />
+      </div>
+
+      <div class="change-home-middle-image1" id="change-home-middle-image1">
+        <img
+          class="middle-img"
+          src="./images/redSneaker.png"
+          alt="Red Sneakers"
+          id="middle-img"
+        />
+      </div>
+      <div class="change-home-middle-image2" id="change-home-middle-image2">
+        <img
+          class="middle-img"
+          src="./images/yellowSneaker.png"
+          alt="Yellow Sneakers"
+          id="middle-img"
+        />
+      </div>
+      <div class="change-home-middle-image3" id="change-home-middle-image3">
+        <img
+          class="middle-img"
+          src="./images/blueSneaker.png"
+          alt="Blue Sneakers"
+          id="middle-img"
+        />
+      </div>
+      <div class="change-home-middle-image4" id="change-home-middle-image4">
+        <img
+          class="middle-img"
+          src="./images/graySneake.png"
+          alt="Gray Sneakers"
+          id="middle-img"
+        />
+      </div>
+
+      <div class="home-images-right" style="margin: 80px 0 0 40px">
+        <div class="home-img-right">
+          <img id="img-colon" src="./images/redSneaker.png" alt="product-0" />
+        </div>
+        <div class="home-img-right">
+          <img
+            id="img-colon"
+            src="./images/yellowSneaker.png"
+            alt="product-1"
+          />
+        </div>
+        <div class="home-img-right">
+          <img id="img-colon" src="./images/blueSneaker.png" alt="product-2" />
+        </div>
+        <div class="home-img-right">
+          <img id="img-colon" src="./images/graySneake.png" alt="product-3" />
+        </div>
+      </div>
+    </div>
+
+    <div class="collection">
+      <h1>Our&nbsp;Collection</h1>
+      <div class="collection-container">
+        <div class="left-side">
+          <div class="left-side-desc">
+            <h2>
+              Black Friday
+              <span style="color: #13508d; background: transparent">SALES</span>
+            </h2>
+            <h3>
+              UP TO <br />
+              <span
+                style="
+                  background: transparent;
+
+                  font-size: 50px;
+                "
+                >55% OFF</span
+              >
+            </h3>
+            <a href="#men" style="background-color: transparent">
+              <button class="button">SHOP NOW</button></a
+            >
+          </div>
+
+          <div class="left-side-img">
+            <img src="images/blackSneaker.png" alt="Black Sneakers" />
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="top-right">
+            <div class="right-side-desc">
+              <h3>Puma Shoes</h3>
+              <p>
+                Lorem ipsum dolor sit, <br />
+                amet consectetur adipisicing elit.
+              </p>
+              <button class="button" onclick="location.href='collection.html'">
+                SHOP NOW
+              </button>
+            </div>
+
+            <div class="right-side-img">
+              <img src="images/whitepuma.png" alt="White Puma" />
+            </div>
+          </div>
+          <div class="right-side-bottom">
+            <div class="bottom1">
+              <h3>Cat Shoes</h3>
+              <img src="images/catshoes.png" alt="Cat Shoes" />
+              <button class="button" onclick="location.href='collection.html'">
+                SHOP NOW
+              </button>
+            </div>
+            <div class="bottom2">
+              <h3>Brand Shoes</h3>
+              <img src="images/greenSneaker.png" alt="Green Sneaker" />
+              <button class="button" onclick="location.href='collection.html'">
+                SHOP NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gap"></div>
+    <div class="man-container" id="men">
+      <div class="man-wrapper">
+        <div class="text-heading">
+          <h1>FOR MENS</h1>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="text">
+              <h4>NIKE</h4>
+              <h3>NIKE BLAZER MID 77 PREMIUM</h3>
+              <h4>$91.00</h4>
+            </div>
+            <div class="img-container">
+              <img
+                src="./images/man/1.png"
+                class="shoeimg"
+                alt="NIKE BLAZER MID '77 PREMIUM"
+              />
+            </div>
+            <div class="link">
+              <a class="link-icon" href="man.html">
+                <abbr title="Go to collection">
+                  <svg
+                    class="cart-icon"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-testid="ShoppingCartIcon"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    ></path></svg></abbr>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="text">
+              <h4>NIKE</h4>
+              <h3>NIKE METCON 8 FLYEASE</h3>
+              <h4>$112.00</h4>
+            </div>
+            <div class="img-container">
+              <img
+                src="./images/man/2.png"
+                class="shoeimg"
+                alt="NIKE METCON 8 FLYEASE"
+              />
+            </div>
+            <div class="link">
+              <a class="link-icon" href="man.html">
+                <abbr title="Go to collection">
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cart-icon css-i4bv87-MuiSvgIcon-root"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-testid="ShoppingCartIcon"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    ></path></svg></abbr>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="text">
+              <h4>NIKE</h4>
+              <h3>NIKE JORDANS AJKO 1</h3>
+              <h4>$130.00</h4>
+            </div>
+            <div class="img-container">
+              <img
+                src="./images/man/3.png"
+                class="shoeimg"
+                alt="NIKE JORDANS AJKO 1"
+              />
+            </div>
+            <div class="link">
+              <a class="link-icon" href="man.html">
+                <abbr title="Go to collection">
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cart-icon css-i4bv87-MuiSvgIcon-root"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-testid="ShoppingCartIcon"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    ></path></svg></abbr>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="text">
+              <h4>NIKE</h4>
+              <h3>AIR JORDAN 1'S MID</h3>
+              <h4>$125.00</h4>
+            </div>
+            <div class="img-container">
+              <img
+                src="./images/man/4.png"
+                class="shoeimg"
+                alt="NIKE METCON 8 FLYEASE"
+              />
+            </div>
+            <div class="link">
+              <a class="link-icon" href="man.html">
+                <abbr title="Go to collection">
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cart-icon css-i4bv87-MuiSvgIcon-root"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-testid="ShoppingCartIcon"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    ></path></svg>
+                  </abbr>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gap"></div>
+    <div class="man-container">
+      <div class="man-wrapper">
+        <div class="text-heading">
+          <h1>FOR WOMENS</h1>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="text">
+              <h4>NIKE</h4>
+              <h3>NIKE BLAZER MID '77 PREMIUM</h3>
+              <h4>$91.00</h4>
+            </div>
+            <div class="img-container">
+              <img
+                src="./images/woman/1.png"
+                class="shoeimg"
+                alt="NIKE BLAZER MID '77 PREMIUM"
+              />
+            </div>
+            <div class="link">
+              <a class="link-icon" href="woman.html">
+                <abbr title="Go to collection">
+                  <svg
+                    class="cart-icon"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-testid="ShoppingCartIcon"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    ></path></svg></abbr>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="text">
+              <h4>NIKE</h4>
+              <h3>NIKE METCON 8 FLYEASE</h3>
+              <h4>$112.00</h4>
+            </div>
+            <div class="img-container">
+              <img
+                src="./images/woman/2.png"
+                class="shoeimg"
+                alt="NIKE METCON 8 FLYEASE"
+              />
+            </div>
+            <div class="link">
+              <a class="link-icon" href="woman.html">
+                <abbr title="Go to collection">
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cart-icon css-i4bv87-MuiSvgIcon-root"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-testid="ShoppingCartIcon"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    ></path></svg></abbr>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="text">
+              <h4>NIKE</h4>
+              <h3>NIKE JORDANS AJKO 1</h3>
+              <h4>$130.00</h4>
+            </div>
+            <div class="img-container">
+              <img
+                src="./images/woman/3.png"
+                class="shoeimg"
+                alt="NIKE JORDANS AJKO 1"
+              />
+            </div>
+            <div class="link">
+              <a class="link-icon" href="woman.html">
+                <abbr title="Go to collection">
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cart-icon css-i4bv87-MuiSvgIcon-root"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-testid="ShoppingCartIcon"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    ></path></svg></abbr>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="text">
+              <h4>NIKE</h4>
+              <h3>AIR JORDAN 1'S MID</h3>
+              <h4>$125.00</h4>
+            </div>
+            <div class="img-container">
+              <img
+                src="./images/woman/4.png"
+                class="shoeimg"
+                alt="NIKE METCON 8 FLYEASE"
+              />
+            </div>
+            <div class="link">
+              <a class="link-icon" href="woman.html">
+                <abbr title="Go to collection">
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cart-icon css-i4bv87-MuiSvgIcon-root"
+                    focusable="false"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    data-testid="ShoppingCartIcon"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    ></path></svg></abbr>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <hr />
+      <footer>
+        <p>&copy; 2023 Your Website</p>
+        <ul>
+          <li>
+            <i
+              class="fa-brands fa-facebook"
+              onclick="location.href='https://facebook.com'"
+            ></i>
+            <i
+              class="fa-brands fa-twitter"
+              onclick="location.href='https://facebook.com'"
+            ></i>
+            <i
+              class="fa-brands fa-instagram"
+              onclick="location.href='https://facebook.com'"
+            ></i>
+          </li>
+        </ul>
+        <div>
+          <label for="learnmore">More from us</label> <br />
+          <input type="text" name="email" placeholder="Email Address*" />
+          <br />
+          <input class="sub" type="button" value="Subscribe Now" requireds />
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sneakers = document.querySelectorAll(
+          "[id^='change-home-middle-image']"
+        );
+        const circleButtons = document.querySelectorAll(
+          ".circle-buttons button"
+        );
+
+        circleButtons.forEach((button, index) => {
+          button.addEventListener("click", function () {
+            hideAllSneakers();
+            sneakers[index].style.display = "flex";
+            document.getElementById("home-middle-img").style.display = "none";
+          });
+        });
+
+        function hideAllSneakers() {
+          sneakers.forEach((sneaker) => {
+            sneaker.style.display = "none";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

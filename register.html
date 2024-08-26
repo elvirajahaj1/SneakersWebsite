@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Sneakers Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .register {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 12%;
+        margin-bottom: 8%;
+      }
+      .register img {
+        margin-left: 10%;
+      }
+      .register-container {
+        display: block;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 10px;
+        margin-left: 15%;
+      }
+      .regbtn {
+        background-color: #0a8e95;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      .regbtn:hover {
+        background-color: #037379;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <h1>SNEEK <span style="color: #a0e9ff">PEAK</span></h1>
+      <header>
+        <!--navbar -->
+        <nav>
+          <div class="header-list">
+            <ul>
+              <li><a href="index.html" target="">Home</a></li>
+              <li><a href="man.html" target="">Man</a></li>
+              <li><a href="woman.html" target="">Woman</a></li>
+              <li><a href="collection.html" target="">Collection</a></li>
+              <li><a href="aboutus.html" target="">About Us</a></li>
+              <li>
+                <i class="fa-solid fa-cart-shopping" id="shpcarticon"></i>
+              </li>
+              <li>
+                <input
+                  class="searchbar"
+                  id="searchbar"
+                  type="search"
+                  placeholder="Search..."
+                />
+                <i class="fa-solid fa-magnifying-glass" id="searchicon"></i>
+              </li>
+              <li>
+                <button
+                  class="navbutton"
+                  id="navbutton"
+                  onclick="location.href='login.html'"
+                >
+                  Log In
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <div class="register">
+      <div class="register-container">
+        <h1 style="color: white; font-size: 30px">Register to Sneek Peak</h1>
+        <form action="action_page.php" id="contact-form">
+          <input type="text" id="fname" required placeholder="FirstName" />
+          <br />
+
+          <input type="text" id="lname" required placeholder="LastName" /><br />
+
+          <input type="text" id="email" required placeholder="E-mail" /><br />
+
+          <input
+            type="password"
+            id="pass"
+            placeholder="Password"
+            minlength="8"
+            required
+          /><br />
+          <input
+            type="password"
+            id="retypepass"
+            placeholder="Re-type password"
+          /><br />
+          <p id="errormessage" style="color: white"></p>
+          <br />
+          <button class="regbtn">Register</button>
+        </form>
+      </div>
+      <img src="images/greenSneaker.png" alt="Green Sneaker" />
+    </div>
+    <div class="footer-wrapper">
+      <hr />
+      <footer>
+        <p>&copy; 2023 Your Website</p>
+        <ul>
+          <li>
+            <i
+              class="fa-brands fa-facebook"
+              onclick="location.href='https://facebook.com'"
+            ></i>
+            <i
+              class="fa-brands fa-twitter"
+              onclick="location.href='https://facebook.com'"
+            ></i>
+            <i
+              class="fa-brands fa-instagram"
+              onclick="location.href='https://facebook.com'"
+            ></i>
+          </li>
+        </ul>
+        <div>
+          <label for="learnmore">More from us</label> <br />
+          <input type="text" name="email" placeholder="Email Address*" />
+          <br />
+          <input class="sub" type="button" value="Subscribe Now" requireds />
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript">
+      const contactForm = document.getElementById("contact-form");
+      const nameInput = document.getElementById("fname");
+      const lnameInput = document.getElementById("lname");
+      const emailInput = document.getElementById("email");
+      const passInput = document.getElementById("pass");
+      const retypePassInp = document.getElementById("retypepass");
+      const errorMessage = document.getElementById("errormessage");
+
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nameValue = nameInput.value;
+        const surnameValue = lnameInput.value;
+        const emailValue = emailInput.value;
+        const passValue = passInput.value;
+        const retypePassVal = retypePassInp.value;
+        const namePattern = /^[A-Za-z\s]+$/;
+        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+
+        if (!namePattern.test(nameValue)) {
+          errorMessage.textContent = "Name can only contain letters.";
+          nameInput.focus();
+          return;
+        }
+        if (!namePattern.test(surnameValue)) {
+          errorMessage.textContent = "Surname can only contain letters.";
+          surnameInput.focus();
+        }
+        if (!emailValue.includes("@")) {
+          errorMessage.textContent = "Invalid email address.";
+          emailInput.focus();
+          return;
+        }
+        if (!passwordPattern.test(passValue)) {
+          errorMessage.textContent =
+            " Password must contain at least one number and one uppercase and lowercase letter";
+          passInput.focus();
+          return;
+        }
+        if (passValue === retypePassVal) {
+        } else {
+          errorMessage.textContent = "Passwords are not matching";
+          retypePassInp.focus();
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>
